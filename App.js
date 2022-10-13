@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import NewsCardHalf from './NewsCardHalf';
 import NewsCard from './NewsCard';
 import RandomImageGenerator from './RandomImageGenerator';
 import TopNav from './TopNav';
+import NewsCardRow from './NewsCardRow';
 
 
 export default function App() {
@@ -13,9 +14,18 @@ export default function App() {
       <StatusBar style="auto" />
       {/* <RandomImageGenerator /> */}
       <TopNav />
-      <NewsCard />
-      <NewsCardHalf />
-    </SafeAreaView>
+      <ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }}>
+        <NewsCard />
+        <NewsCardHalf />
+        <NewsCardRow />
+        <NewsCardRow />
+        <NewsCardRow />
+        <NewsCardRow />
+        <NewsCardRow />
+        <NewsCardRow />
+        <NewsCardRow />
+      </ScrollView>
+    </SafeAreaView >
   );
 }
 
@@ -24,5 +34,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'lightgray',
     alignItems: 'center',
-  },
+  }
 });

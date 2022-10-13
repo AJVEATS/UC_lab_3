@@ -1,32 +1,32 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import React from 'react'
 
 const NewsCardHalf = () => {
     return (
-        <View style={styles.cardHalfContainer}>
-            <View style={styles.cardHalfLeft}>
+        <Pressable style={styles.cardHalfContainer}>
+            <View style={styles.cardHalf}>
                 <View style={styles.cardHalfImageContainer}>
                     <Image source={{ uri: "https://picsum.photos/200/300?random=1" }} style={styles.cardHalfImage} />
                 </View>
                 <View style={styles.cardHalfTextContainer}>
                     <Text style={styles.cardHalfTitle}>This is not as imporant</Text>
                     <View style={styles.cardHalfSubTitle}>
-                        <Text style={styles.cardHalfSubTitleText}>3h | Asuia</Text>
+                        <Text style={styles.cardHalfSubTitleText}>3h | Asia</Text>
                     </View>
                 </View>
             </View>
-            <View style={styles.cardHalfRight}>
+            <View style={styles.cardHalf}>
                 <View style={styles.cardHalfImageContainer}>
-                    <Image source={{ uri: "https://picsum.photos/200/300?random=5" }} style={styles.cardHalfImage} />
+                    <Image source={{ uri: "https://picsum.photos/200/300?random=7" }} style={styles.cardHalfImage} />
                 </View>
                 <View style={styles.cardHalfTextContainer}>
                     <Text style={styles.cardHalfTitle}>This is not as imporant</Text>
                     <View style={styles.cardHalfSubTitle}>
-                        <Text style={styles.cardHalfSubTitleText}>3h | Asuia</Text>
+                        <Text style={styles.cardHalfSubTitleText}>3h | Asia</Text>
                     </View>
                 </View>
             </View>
-        </View>
+        </Pressable>
     )
 }
 
@@ -35,17 +35,13 @@ export default NewsCardHalf
 const styles = StyleSheet.create({
     cardHalfContainer: {
         width: '95%',
-        height: '25%',
+        height: 175,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        marginBottom: '3%',
     },
-    cardHalfLeft: {
-        width: '49%',
-        height: '100%',
-        backgroundColor: 'white',
-    },
-    cardHalfRight: {
-        width: '49%',
+    cardHalf: {
+        width: '48.5%',
         height: '100%',
         backgroundColor: 'white',
     },

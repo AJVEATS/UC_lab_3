@@ -3,9 +3,9 @@ import React from 'react'
 
 const NewsCard = () => {
     return (
-        <View style={styles.cardContainer}>
+        <Pressable style={styles.cardContainer}>
             <View style={styles.cardImageContainer}>
-                <Image source={{ uri: "https://picsum.photos/200/300" }} style={styles.cardImage} />
+                <Image source={{ uri: "https://picsum.photos/200/300?random=8" }} style={styles.cardImage} />
             </View>
             <View style={styles.cardTextContainer}>
                 <Text style={styles.cardTitle}>This is a main headline</Text>
@@ -13,7 +13,7 @@ const NewsCard = () => {
                     <Text style={styles.cardSubTitleText}>3h | Europe</Text>
                 </View>
             </View>
-        </View>
+        </Pressable>
     )
 }
 
@@ -22,7 +22,7 @@ export default NewsCard
 const styles = StyleSheet.create({
     cardContainer: {
         width: '95%',
-        height: '35%',
+        height: 225,
         backgroundColor: 'white',
         marginVertical: '3%'
     },

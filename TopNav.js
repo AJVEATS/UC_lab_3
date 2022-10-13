@@ -19,7 +19,7 @@ export default TopNav
 
 const styles = StyleSheet.create({
     topNavContainer: {
-        backgroundColor: 'red',
+        backgroundColor: '#b80000',
         width: '100%',
         paddingBottom: '4%',
         paddingTop: '2%'
